@@ -1,9 +1,13 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "./Header";
 
 const Main = () => {
     return (
         <main>
-            Main
+            <Routes>
+                <Route path="/" element={<Header />} />
+            </Routes>
         </main>
     );
 };
