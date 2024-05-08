@@ -30,7 +30,7 @@ const BookingForm = (props) => {
 
                     <section>
                         <label htmlFor='book-time'>Choose Time:</label>
-                        <select id='book-time' value={time} onChange={(e) => setTime(e.target.value)}>
+                        <select id='book-time' value={time} onChange={(e) => setTime(e.target.value)} required>
                             <option value=''>Select a Time</option>
                             {props.availableTimes.availableTimes.map(availableTimes => {
                                 return <option key={availableTimes}>
@@ -42,19 +42,20 @@ const BookingForm = (props) => {
 
                     <section>
                         <label htmlFor='boook-guests'>Number of Guests:</label>
-                        <input id='book-guests'  min='1' value={guests} onChange={(e) => setGuests(e.target.value)} />
+                        <input id='book-guests'  min='1' value={guests} onChange={(e) => setGuests(e.target.value)} required/>
                     </section>
 
                     <section>
                     <label htmlFor='boook-ocassion'>Occasion:</label>
-                    <select id='book-occasion' key={occasion} value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+                    <select id='book-occasion' key={occasion} value={occasion} onChange={(e) => setOccasion(e.target.value)} required>
+                        <option>Select an Occasion</option>
                         <option>Birthday</option>
                         <option>Anniversary</option>
                     </select>
                     </section>
 
                     <section className='btnReceive'>
-                        <input aria-label='On Click' type='submit' value={'Make Your Reservation'} />
+                        <input aria-label='On Click' type='submit' value={'Make Your Reservation'} disabled={!date || !time || !guests || !occasion}/>
                     </section>
                 </fieldset>
             </form>
