@@ -1,6 +1,8 @@
 body{
   width: 100%;
   margin: 0 auto;
+  font-family: 'Markazi Text', serif;
+  font-size: 24px;
 }
 
 li{
@@ -82,14 +84,15 @@ position: relative;
 
 h2 {
   color: #F4CE14;
-  font-size: 40px;
+  font-size: 42px;
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .banner p {
+  font-family: 'Karla', sans-serif;
   font-size: 20px;
   max-width: 520px;
   line-height: 1.5;
@@ -121,6 +124,44 @@ button {
   border-radius: 20px;
 }
 
+.form-heading {
+  margin-left: 13%;
+}
+
+form, .confirm{
+  padding: 10px 13%;
+}
+
+.formField{
+  padding: 50px 20px;
+}
+
+input, label{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#book-date, #book-time, #book-guests, #book-occasion{
+  background: #bdbdbd43;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.btnReceive input{
+  padding: 12px 16px;
+  margin-top: 20px;
+  background: #495e57;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+
+}
+
+.confirm span{
+  color: blue;
+}
 
 
 /* menu items */
@@ -150,7 +191,6 @@ button {
 }
 
 .menu-items{
-  /* height: 400px; */
   width: 350px;
   background: #a9c8be;
   border-radius: 8px;
@@ -170,6 +210,7 @@ button {
 .menu-content .heading{
   display: flex;
   justify-content: space-between;
+  font-size: 28px;
 }
 
 .orderbtn{
@@ -240,6 +281,14 @@ footer ul li{
 
   .banner-img{
     display: none;
+  }
+
+  .form-heading {
+    margin-left: 8%;
+  }
+
+  form, .confirm{
+    padding: 10px 8%;
   }
 
 
